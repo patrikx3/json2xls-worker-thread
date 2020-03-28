@@ -5,8 +5,7 @@ const {
 // this is in the main thread
 if (isMainThread) {
 
-    const transform = async (data, options) => {
-
+    const ensureOptions = (options) => {
         options = options || {}
 
         if (!options.hasOwnProperty('output')) {
@@ -21,6 +20,12 @@ if (isMainThread) {
             throw new Error(`The p3x-json2xls-worker-thread options.output can be 'binary' or 'base64', you requested '${options.output}', which is wrong.`)
         }
 
+        return options
+    }
+
+    const transform = async (data, options) => {
+
+        options = ensureOptions(options)
 
         const workerResult = await new Promise((resolve, reject) => {
             const worker = new Worker(__filename, {
@@ -46,6 +51,7 @@ if (isMainThread) {
             try {
                 options = options || {}
                 options.output = 'binary';
+                options = ensureOptions(options)
                 const xls = await transform(data, options);
                 res.setHeader('Content-Type', 'application/vnd.openxmlformats');
                 res.setHeader("Content-Disposition", "attachment; filename=" + filename);
@@ -60,6 +66,18 @@ if (isMainThread) {
         };
         next();
     };
+
+    transform.sync = (data, options) => {
+        const json2xls = require('./util');
+        options = ensureOptions(options)
+        const xls = json2xls(data, options.nodeExcel);
+        if (options.output === 'base64') {
+            const xlsBase64 = Buffer.from(xls, 'binary').toString('base64');
+            return xlsBase64
+        } else {
+            return xls
+        }
+    }
 
     module.exports = transform
 

@@ -21,4 +21,15 @@ describe('generate-xls', () => {
         //await fs.writeFile('data.xlsx', xlsBinary, 'binary');
 
     })
+
+
+    it('check base64 sync', () => {
+
+        const xlsBase64 = json2xls.sync(data, {
+            output: 'base64'
+        })
+        assert.ok(xlsBase64 === Buffer.from(xlsBase64, 'base64').toString('base64'))
+        //await fs.writeFile('data.xlsx', xlsBinary, 'binary');
+
+    })
 })

@@ -8,7 +8,7 @@
 
 
 ---
-# 📈 Convert JSON to XLSX with offloading the constructing the data using a worker thread v2020.4.131
+# 📈 Convert JSON to XLSX with offloading the constructing the data using a worker thread v2020.4.135
 
 
 
@@ -119,6 +119,23 @@ app.get('/',function(req, res) {
 });
 ```
 
+It is possible to block the event loop by using the `sync` function eg.:
+```js
+const json2xls = require('p3x-json2xls-worker-thread')
+
+const json = {
+    foo: 'bar',
+    qux: 'moo',
+    poo: 123,
+    stux: new Date()
+}
+
+const xlsBinary = json2xls.sync(json, {
+    output: 'base64' // can be binary as well, just sugar...
+})
+
+console.log(xlsBinary)
+```
 
 [//]: #@corifeus-footer
 
@@ -135,7 +152,7 @@ All my domains ([patrikx3.com](https://patrikx3.com) and [corifeus.com](https://
 
 ---
 
-[**P3X-JSON2XLS-WORKER-THREAD**](https://pages.corifeus.com/json2xls-worker-thread) Build v2020.4.131
+[**P3X-JSON2XLS-WORKER-THREAD**](https://pages.corifeus.com/json2xls-worker-thread) Build v2020.4.135
 
 [![Donate for Corifeus / P3X](https://img.shields.io/badge/Donate-Corifeus-003087.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=QZVM4V6HVZJW6)  [![Contact Corifeus / P3X](https://img.shields.io/badge/Contact-P3X-ff9900.svg)](https://www.patrikx3.com/en/front/contact) [![Like Corifeus @ Facebook](https://img.shields.io/badge/LIKE-Corifeus-3b5998.svg)](https://www.facebook.com/corifeus.software)
 
