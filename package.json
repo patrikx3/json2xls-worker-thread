@@ -1,0 +1,44 @@
+{
+    "name": "p3x-json2xls-worker-thread",
+    "version": "2020.4.127",
+    "corifeus": {
+        "icon": "far fa-file-excel",
+        "prefix": "p3x-",
+        "publish": true,
+        "type": "p3x",
+        "code": "Legend",
+        "nodejs": "v12.16.1",
+        "opencollective": false,
+        "reponame": "json2xls-worker-thread",
+        "build": true
+    },
+    "description": "📡 Convert JSON to XLSX with offloading the constructing the data using a worker thread",
+    "main": "src/index.js",
+    "scripts": {
+        "test": "grunt && mocha ./test/mocha/*.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/patrikx3/json2xls-worker-thread.git"
+    },
+    "keywords": [
+        "json2xls",
+        "worker",
+        "thread",
+        "offloading",
+        "async"
+    ],
+    "author": "Patrik Laszlo <alabard@gmail.com>",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/patrikx3/json2xls-worker-thread/issues"
+    },
+    "homepage": "https://pages.corifeus.com/json2xls-worker-thread",
+    "dependencies": {
+        "corifeus-builder": "^2020.4.148",
+        "excel-export": "^0.5.1"
+    },
+    "engines": {
+        "node": ">=12.13.0"
+    }
+}
