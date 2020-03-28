@@ -86,16 +86,4 @@ transform.prepareJson = function(json,config) {
     return res;
 };
 
-/*
-transform.middleware = function(req,res,next) {
-    res.xls = function(fn,data,config) {
-        var xls = transform(data,config);
-        res.setHeader('Content-Type', 'application/vnd.openxmlformats');
-        res.setHeader("Content-Disposition", "attachment; filename=" + fn);
-        res.end(xls, 'binary');
-    };
-    next();
-};
-*/
-
 module.exports = transform;
