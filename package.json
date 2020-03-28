@@ -34,8 +34,10 @@
         "url": "https://github.com/patrikx3/json2xls-worker-thread/issues"
     },
     "homepage": "https://pages.corifeus.com/json2xls-worker-thread",
+    "devDependencies": {
+        "corifeus-builder": "^2020.4.148"
+    },
     "dependencies": {
-        "corifeus-builder": "^2020.4.148",
         "excel-export": "^0.5.1"
     },
     "engines": {
