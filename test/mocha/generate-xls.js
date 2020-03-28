@@ -1,6 +1,6 @@
 const assert = require('assert');
 
-const data = require('../fixtures/arrayData')
+const data = require('../fixtures/array-data')
 const json2xls = require('../../src')
 
 describe('generate-xls', () => {
