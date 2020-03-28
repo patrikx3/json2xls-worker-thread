@@ -16,6 +16,12 @@ if (isMainThread) {
             options.nodeExcel = undefined
         }
 
+
+        if (typeof options.output !== 'string' || (options.output !== 'binary' && options.output !== 'base64')) {
+            throw new Error(`The p3x-json2xls-worker-thread options.output can be 'binary' or 'base64', you requested '${options.output}', which is wrong.`)
+        }
+
+
         const workerResult = await new Promise((resolve, reject) => {
             const worker = new Worker(__filename, {
                 workerData: {
@@ -58,10 +64,6 @@ if (isMainThread) {
     module.exports = transform
 
 } else {
-
-    if (typeof workerData.options.output !== 'string' || (workerData.options.output !== 'binary' && workerData.options.output !== 'base64')) {
-        throw new Error(`The p3x-json2xls-worker-thread options.output can be 'binary' or 'base64', you requested '${workerData.options.output}', which is wrong.`)
-    }
 
     const json2xls = require('./util');
     const xls = json2xls(workerData.data, workerData.options.nodeExcel);
