@@ -26,7 +26,10 @@
         "worker",
         "thread",
         "offloading",
-        "async"
+        "async",
+        "xls",
+        "xlsx",
+        "json"
     ],
     "author": "Patrik Laszlo <alabard@gmail.com>",
     "license": "MIT",
