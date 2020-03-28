@@ -36,11 +36,21 @@ if (isMainThread) {
     };
 
     transform.middleware = function(req, res, next) {
-        res.xls = async (filename, data, config) => {
-            const xls = await transform(data, config);
-            res.setHeader('Content-Type', 'application/vnd.openxmlformats');
-            res.setHeader("Content-Disposition", "attachment; filename=" + filename);
-            res.end(xls, 'binary');
+        res.xls = async (filename, data, options) => {
+            try {
+                options = options || {}
+                options.output = 'binary';
+                const xls = await transform(data, options);
+                res.setHeader('Content-Type', 'application/vnd.openxmlformats');
+                res.setHeader("Content-Disposition", "attachment; filename=" + filename);
+                res.end(xls, 'binary');
+            } catch(e) {
+                res.status(500).send({
+                    status: 'error',
+                    ok: false,
+                    message: e.message
+                })
+            }
         };
         next();
     };
@@ -49,8 +59,8 @@ if (isMainThread) {
 
 } else {
 
-    if (typeof workerData.options.output !== 'string' && workerData.options.output !== 'binary' && workerData.options.output !== 'base64') {
-        throw new Error(`The p3x-json2xls-worker-thread output can be 'binary' or 'base64', you requested ${workerData.options.output}, which is wrong.`)
+    if (typeof workerData.options.output !== 'string' || (workerData.options.output !== 'binary' && workerData.options.output !== 'base64')) {
+        throw new Error(`The p3x-json2xls-worker-thread options.output can be 'binary' or 'base64', you requested '${workerData.options.output}', which is wrong.`)
     }
 
     const json2xls = require('./util');
