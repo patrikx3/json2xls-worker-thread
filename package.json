@@ -1,6 +1,6 @@
 {
     "name": "p3x-json2xls-worker-thread",
-    "version": "2020.4.127",
+    "version": "2020.4.129",
     "corifeus": {
         "icon": "far fa-file-excel",
         "prefix": "p3x-",
@@ -12,7 +12,7 @@
         "reponame": "json2xls-worker-thread",
         "build": true
     },
-    "description": "\uD83D\uDCC8 Convert JSON to XLSX with offloading the constructing the data using a worker thread",
+    "description": "📈 Convert JSON to XLSX with offloading the constructing the data using a worker thread",
     "main": "src/index.js",
     "scripts": {
         "test": "grunt && mocha ./test/mocha/*.js"
