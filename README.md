@@ -11,24 +11,24 @@
 
 
 
-# 📈 Convert JSON to Excel XLSX with offloading the constructing the data using a worker thread v2020.4.159
+# 📈 Convert JSON to Excel XLSX with offloading the constructing the data using a worker thread v2020.4.162
 
 
 
 **Bugs are evident™ - MATRIX️**
     
 
-### Node Version Requirement
+### NodeJs LTS Version Requirement
 ```
 >=12.13.0
 ```
 
-### Built on Node
+### Built on NodeJs
 ```
-v12.16.2
+v12.16.3
 ```
 
-The ```async``` and ```await``` keywords are required.
+The ```async``` and ```await``` keywords are required. Only the latest LTS variant is supported.
 
 Install NodeJs:
 https://nodejs.org/en/download/package-manager/
@@ -155,7 +155,7 @@ All my domains ([patrikx3.com](https://patrikx3.com) and [corifeus.com](https://
 
 ---
 
-[**P3X-JSON2XLS-WORKER-THREAD**](https://pages.corifeus.com/json2xls-worker-thread) Build v2020.4.159
+[**P3X-JSON2XLS-WORKER-THREAD**](https://corifeus.com/json2xls-worker-thread) Build v2020.4.162
 
 [![Donate for Corifeus / P3X](https://img.shields.io/badge/Donate-Corifeus-003087.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=QZVM4V6HVZJW6)  [![Contact Corifeus / P3X](https://img.shields.io/badge/Contact-P3X-ff9900.svg)](https://www.patrikx3.com/en/front/contact) [![Like Corifeus @ Facebook](https://img.shields.io/badge/LIKE-Corifeus-3b5998.svg)](https://www.facebook.com/corifeus.software)
 
@@ -170,8 +170,3 @@ All my domains ([patrikx3.com](https://patrikx3.com) and [corifeus.com](https://
 
 
 [//]: #@corifeus-footer:end
-
-
-
-
-

@@ -1,9 +1,9 @@
 
-@license p3x-json2xls-worker-thread v2020.4.159
+@license p3x-json2xls-worker-thread v2020.4.162
   
 📈 Convert JSON to Excel XLSX with offloading the constructing the data using a worker thread
 
-https://pages.corifeus.com/json2xls-worker-thread
+https://corifeus.com/json2xls-worker-thread
 
 Copyright (c) 2020 Patrik Laszlo / P3X / Corifeus and contributors.
 
