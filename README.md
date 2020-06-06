@@ -11,7 +11,7 @@
 
 
 
-# 📈 Convert JSON to Excel XLSX with offloading the constructing the data using a worker thread v2020.4.172
+# 📈 Convert JSON to Excel XLSX with offloading the constructing the data using a worker thread v2020.4.175
 
 
 
@@ -25,7 +25,7 @@
 
 ### Built on NodeJs
 ```txt
-v12.16.3
+v12.18.0
 ```
 
 The ```async``` and ```await``` keywords are required. Only the latest LTS variant is supported.
@@ -46,6 +46,9 @@ Utility to convert json to an excel file, based on [Node-Excel-Export](https://g
   
 This is a totally fork of the [json2xls](https://github.com/rikkertkoppes/json2xls), but the XLSX constructing can be CPU intensive so we are offloading the XLSX constructing using a worker thread.
 
+  
+Of course, when using a worker thread, the execution is about 20-25ms longer, then when we are in the event loop, so the worker thread is valid when we are generating a big dataset.
+ 
 # Installation
 
 ```bash
@@ -155,7 +158,7 @@ All my domains ([patrikx3.com](https://patrikx3.com) and [corifeus.com](https://
 
 ---
 
-[**P3X-JSON2XLS-WORKER-THREAD**](https://corifeus.com/json2xls-worker-thread) Build v2020.4.172
+[**P3X-JSON2XLS-WORKER-THREAD**](https://corifeus.com/json2xls-worker-thread) Build v2020.4.175
 
 [![Donate for Corifeus / P3X](https://img.shields.io/badge/Donate-Corifeus-003087.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=QZVM4V6HVZJW6)  [![Contact Corifeus / P3X](https://img.shields.io/badge/Contact-P3X-ff9900.svg)](https://www.patrikx3.com/en/front/contact) [![Like Corifeus @ Facebook](https://img.shields.io/badge/LIKE-Corifeus-3b5998.svg)](https://www.facebook.com/corifeus.software)
 
