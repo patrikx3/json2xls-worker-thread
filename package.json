@@ -1,13 +1,13 @@
 {
     "name": "p3x-json2xls-worker-thread",
-    "version": "2020.10.111",
+    "version": "2020.10.114",
     "corifeus": {
         "icon": "far fa-file-excel",
         "prefix": "p3x-",
         "publish": true,
         "type": "p3x",
         "code": "Legend",
-        "nodejs": "v12.18.4",
+        "nodejs": "v12.19.0",
         "opencollective": false,
         "reponame": "json2xls-worker-thread",
         "build": true
@@ -38,12 +38,12 @@
     },
     "homepage": "https://corifeus.com/json2xls-worker-thread",
     "devDependencies": {
-        "corifeus-builder": "^2020.10.113",
+        "corifeus-builder": "^2020.10.118",
         "express": "^4.17.1"
     },
     "dependencies": {
         "excel-export": "^0.5.1",
-        "object-path": "^0.11.4"
+        "object-path": "^0.11.5"
     },
     "engines": {
         "node": ">=12.13.0"
