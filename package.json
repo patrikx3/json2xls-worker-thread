@@ -38,7 +38,7 @@
     },
     "homepage": "https://corifeus.com/json2xls-worker-thread",
     "devDependencies": {
-        "corifeus-builder": "^2021.10.181",
+        "corifeus-builder": "^2021.10.194",
         "express": "^4.17.1"
     },
     "dependencies": {
