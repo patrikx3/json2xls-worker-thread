@@ -1,5 +1,5 @@
 
-@license p3x-json2xls-worker-thread v2022.4.102
+@license p3x-json2xls-worker-thread v2022.4.105
   
 📈 Convert JSON to Excel XLSX with offloading the constructing the data using a worker thread
 
