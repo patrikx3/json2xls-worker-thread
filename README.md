@@ -6,7 +6,7 @@
 
 
 
-# 📈 Convert JSON to Excel XLSX with offloading the constructing the data using a worker thread v2024.4.122
+# 📈 Convert JSON to Excel XLSX with offloading the constructing the data using a worker thread v2024.10.102
 
 
 
@@ -20,7 +20,7 @@
 ### Built on NodeJs version
 
 ```txt
-v22.1.0
+v22.3.0
 ```
 
 
@@ -160,7 +160,7 @@ All my domains, including [patrikx3.com](https://patrikx3.com) and [corifeus.com
 ---
 
 
-[**P3X-JSON2XLS-WORKER-THREAD**](https://corifeus.com/json2xls-worker-thread) Build v2024.4.122
+[**P3X-JSON2XLS-WORKER-THREAD**](https://corifeus.com/json2xls-worker-thread) Build v2024.10.102
 
  [![NPM](https://img.shields.io/npm/v/p3x-json2xls-worker-thread.svg)](https://www.npmjs.com/package/p3x-json2xls-worker-thread)  [![Donate for Corifeus / P3X](https://img.shields.io/badge/Donate-Corifeus-003087.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=QZVM4V6HVZJW6)  [![Contact Corifeus / P3X](https://img.shields.io/badge/Contact-P3X-ff9900.svg)](https://www.patrikx3.com/en/front/contact) [![Like Corifeus @ Facebook](https://img.shields.io/badge/LIKE-Corifeus-3b5998.svg)](https://www.facebook.com/corifeus.software)
 
