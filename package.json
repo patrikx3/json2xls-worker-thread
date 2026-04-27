@@ -1,6 +1,6 @@
 {
     "name": "p3x-json2xls-worker-thread",
-    "version": "2026.4.128",
+    "version": "2026.4.133",
     "corifeus": {
         "icon": "far fa-file-excel",
         "prefix": "p3x-",
@@ -38,7 +38,7 @@
     },
     "homepage": "https://corifeus.com/json2xls-worker-thread",
     "devDependencies": {
-        "corifeus-builder": "^2026.4.149",
+        "corifeus-builder": "^2026.4.154",
         "express": "^5.2.1"
     },
     "dependencies": {
